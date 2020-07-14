@@ -8,10 +8,15 @@ let navSection = document.querySelector(".nav-container");
     navSection.addEventListener("mouseleave", () => {
         navSection.style.background = "white"})
 
-//Event changes main bus image when mouseover
+//Event changes main bus image when mouse enters
 let busImage = document.querySelector(".intro img")
-    busImage.addEventListener("mouseover", () => {
-        busImage.src = "img/funbustour.jpg"})
+    busImage.addEventListener("mouseenter", () => {
+        busImage.style.transform = "scale(1.2)"
+        busImage.style.transition = "transform 0.3s"
+    })
+    busImg.addEventListener("mouseleave", ()=>{
+        busImg.style.transform = "scale(1.0)"
+    })
 
 //Event changes "Adventure" image to new image when clicked
 let adventureImg = document.querySelector(".img-content img")
@@ -25,46 +30,38 @@ let destinationImg = document.querySelector(".content-destination img")
 
 // Make all p tags change to blue on 'keydown'
 const p = document.querySelectorAll('p');
-p.forEach(element => {
-    window.addEventListener('keydown', () => {
-        element.style.color = '#17A2B8';
-    })
+    p.forEach(element => {
+        window.addEventListener('keydown', () => {
+            element.style.color = '#17A2B8';
+        })
 })
-// Make all p tags change to black on 'keyup'
-p.forEach(element => {
-    window.addEventListener('keyup', () => {
-        element.style.color = 'black';
-    })
-})
-
-// Event change all h2 tags to blue 
-const title = document.querySelectorAll('h2');
-title.forEach(element => {
-    window.addEventListener('contextmenu', () => {
-        element.style.color = '#17A2B8';
-    })
+// Make all p tags change to pink on 'keyup'
+    p.forEach(element => {
+        window.addEventListener('keyup', () => {
+            element.style.color = 'red';
+        })
 })
         
 //Event change "SignUp Button" with alerts
 
 const signUpBtn1 = document.querySelector('#btn-1');
-signUpBtn1.addEventListener('mouseenter', (event) => {
+signUpBtn1.addEventListener('mouseenter', () => {
     alert(`Don't forget the Sunblock?`)
 })
 
 const signUpBtn2 = document.querySelector('#btn-2');
-signUpBtn2.addEventListener('mouseenter', (event) => {
+signUpBtn2.addEventListener('mouseenter', () => {
     event.target.style.transform = "scale(2)";
-    setTimeout(function(){event.target.style.transform = ""}, 2000);
+    setTimeout(function(){event.target.style.transform = ""}, 3000);
 })
 
 const signUpBtn3 = document.querySelector('#btn-3');
-signUpBtn3.addEventListener('dblclick', (event) => {
+signUpBtn3.addEventListener('dblclick', () => {
     event.target.textContent = "THIS IS LIFE!"
     event.stopPropagation();
 })
 
 const topBar = document.querySelector('.main-navigation');
-topBar.addEventListener('dblclick', (event) => {
+topBar.addEventListener('dblclick', () => {
     event.stopPropagation();
 })
