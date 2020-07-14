@@ -4,14 +4,14 @@
 let navSection = document.querySelector(".nav-container");
     navSection.addEventListener("mouseover", () => {
         navSection.style.background = "lightgreen"})
-        
+
     navSection.addEventListener("mouseleave", () => {
         navSection.style.background = "white"})
 
-//Event changes main bus image when clicked
+//Event changes main bus image when mouseover
 let busImage = document.querySelector(".intro img")
-    busImage.addEventListener("click", () => {
-        busImage.src = "img/funbustour.png"})
+    busImage.addEventListener("mouseover", () => {
+        busImage.src = "img/funbustour.jpg"})
 
 //Event changes "Adventure" image to new image when clicked
 let adventureImg = document.querySelector(".img-content img")
@@ -19,7 +19,7 @@ let adventureImg = document.querySelector(".img-content img")
         adventureImg.src = "img/adventureCamel.png"})
 
 //Event changes "Destination" image to new image when double clicked
-let destinationImg = document.querySelector(".img-content img")
+let destinationImg = document.querySelector(".content-destination img")
     destinationImg.addEventListener("dblclick", () => {
         destinationImg.src = "img/islandBoat.png"})
 
