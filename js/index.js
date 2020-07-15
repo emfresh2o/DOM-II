@@ -5,17 +5,18 @@ let navSection = document.querySelector(".nav-container");
     navSection.addEventListener("mouseover", () => {
         navSection.style.backgroundColor = "lightgreen"})
 
-    navSection.addEventListener("click", () => {
+    navSection.addEventListener("click", (e) => {
         navSection.style.backgroundColor = "white";
     })
 
 // Stop Propagation and Prevent Default
 const navLinks = document.querySelectorAll('nav a');
-navLinks.forEach(eLink)
+navLinks.forEach(eLink =>{
     eLink.addEventListener('click', (event) => {
             event.preventDefault();
             event.stopPropagation();
     })
+})
 
 //Event changes main bus image when mouse enters
 let busImage = document.querySelector(".intro img")
