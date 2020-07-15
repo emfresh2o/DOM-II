@@ -1,12 +1,21 @@
 // Your code goes here
    
-//Event changes nav background -> lightgreen when mouseover, and back -> white when leaving
+//Event changes nav background -> lightgreen when mouseover, and back -> white when clicked
 let navSection = document.querySelector(".nav-container");
     navSection.addEventListener("mouseover", () => {
-        navSection.style.background = "lightgreen"})
+        navSection.style.backgroundColor = "lightgreen"})
 
-    navSection.addEventListener("mouseleave", () => {
-        navSection.style.background = "white"})
+    navSection.addEventListener("click", () => {
+        navSection.style.backgroundColor = "white";
+    })
+
+// Stop Propagation and Prevent Default
+const navLinks = document.querySelectorAll('nav a');
+navLinks.forEach(eLink)
+    eLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+    })
 
 //Event changes main bus image when mouse enters
 let busImage = document.querySelector(".intro img")
