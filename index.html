@@ -7,12 +7,12 @@
   <title>Fun Bus Travel Agency</title>
 
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Roboto" rel="stylesheet">
-  <link href="less/index.less" rel="stylesheet">
+ <link href="less/index.less" rel="stylesheet">
 
   <!-- If we omit the "defer" attribute, `index.js` will load and execute
   _before_ the rest of the HTML is parsed by the browser, which would be bad because
   the code inside `index.js` expects the page to be fully parsed (and the DOM fully built) -->
-  <script defer src="js/index.js"></script>
+  <script defer="defer" src="js/index.js"></script>
   <!-- We will often see script tags placed right before the closing body tag,
   it's a way of getting around the problem above without the need for "defer" -->
 </head>
@@ -21,7 +21,7 @@
 
   <header class="main-navigation">
     <div class="container nav-container">
-      <h1 class="logo-heading">Fun Bus</h1>
+      <img class="logo-header" src="img/bus-logo.png">
       <nav class="nav">
         <a class="nav-link" href="#">Home</a>
         <a class="nav-link" href="#">About Us</a>
@@ -48,7 +48,7 @@
       </div>
     </section>
     <section class="content-section inverse-content">
-      <div class="img-content">
+      <div class="img-content" id="img-1">
           <img src="img/fun.jpg" class="img-fluid rounded" alt="Lets have fun!">
       </div>
       <div class="text-content">
@@ -68,17 +68,17 @@
       <div class="destination">
         <h4>Fun In The Sun</h4>
         <p>Expedition excursion design excursion fun, clean simple organized WordPress Travel colorful webdesign. Traveler blogger website design expedition clean excursion traveling.</p>
-        <div class="btn">Sign Me Up!</div>
+        <div class="btn" id="btn-1">Sign Me Up!</div>
       </div>
       <div class="destination">
         <h4>Mountain Excursion</h4>
         <p>Expedition excursion design excursion fun, clean simple organized WordPress Travel colorful webdesign. Traveler blogger website design expedition clean excursion traveling.</p>
-        <div class="btn">Sign Me Up!</div>
+        <div class="btn" id="btn-2">Sign Me Up!</div>
       </div>
       <div class="destination">
         <h4>Island Getaway</h4>
         <p>Expedition excursion design excursion fun, clean simple organized WordPress Travel colorful webdesign. Traveler blogger website design expedition clean excursion traveling.</p>
-        <div class="btn">Sign Me Up!</div>
+        <div class="btn" id="btn-3">Sign Me Up!</div>
       </div>
     </section>
   </div><!-- container -->
